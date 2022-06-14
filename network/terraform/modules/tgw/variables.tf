@@ -5,5 +5,5 @@ variable "environment" {
 
 variable "ous" {
     description = "List of OUs to share the resource with"
-    type = list(string)
+    type = map(list(string))
 }
