@@ -3,7 +3,3 @@ variable "environment" {
     type = string
 }
 
-variable "ous" {
-    description = "List of OUs to share the resource with"
-    type = map(list(string))
-}

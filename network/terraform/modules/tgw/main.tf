@@ -19,7 +19,7 @@ resource "aws_ram_resource_share" "tgw_share" {
 }
 
 resource "aws_ram_principal_association" "tgw_principal" {
-    principal          = lookup(toset(var.ous), var.environment)
+    principal          = data.aws_ssm_parameter.ous.value
     resource_share_arn = aws_ram_resource_share.tgw_share.arn
 
   depends_on = [
