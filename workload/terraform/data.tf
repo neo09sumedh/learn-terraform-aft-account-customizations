@@ -4,8 +4,8 @@ data "aws_availability_zones" "available" {}
 
 data "aws_ec2_transit_gateway" "tgw" {
     filter {
-      name   = "Name"
-      values = ["AFT-Transit-Gateway"]
+      name   = "managed_by"
+      values = ["AFT"]
     }
 }
 
